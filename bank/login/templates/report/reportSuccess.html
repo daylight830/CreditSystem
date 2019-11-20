@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}挂失成功{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/report.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <img src="{% static 'images/bank.jpg' %}" alt="" style="height: 100px;">
+    <div class="Breadcrumbs" style="margin-left: 2%;">
+        <a href="#">首页</a>&nbsp;>
+        <a href="Personal_information.html">个人信息</a>&nbsp;>
+        <span>挂失</span>
+    </div>
+
+    <div class="container">
+        <div id="report_table" style="margin-top: 2%;">
+            <div class="row">
+
+                <div class="col-md-4 col-md-offset-4">
+                  <form class='form-horizontal' action="/login/" method="post">
+
+                      {% if message %}
+                          <div class="alert alert-warning">{{ message }}</div>
+                      {% endif %}
+                      {% csrf_token %}
+
+                      <!--通过{{ login_form.name_of_field }}获取每一个字段，然后分别渲染-->
+                      <div class="form-group">
+                        <label for="id_password">您的新银行卡号为：</label>
+                        <input type="password" name='username' class="form-control" id="id_password" placeholder="请输入您要挂失的银行卡号" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="id_password">请输入您的新密码：</label>
+                        <input type="password" name='password' class="form-control" id="newPassword" placeholder="请输入您的新密码" required>
+                      </div>
+
+<!--                      <button type="submit" class="btn btn-primary pull-right">确认</button>-->
+                      <button type="reset" class="btn pull-left" style="background-color: #FA4A5C;margin: 3px;color: #FFFFFF;">重置</button>
+                      <div class="form-group">
+                        <div class="col-sm-offset-5 col-sm-4">
+                            <button type="button" class="btn pull-right" onclick="" style="width: 100%;background-color: #FA4A5C;margin: 3px;color: #FFFFFF;">确认</button>
+                        </div>
+                      </div>
+
+<!--                      显示挂失成功-->
+                      {% if message1 %}
+                          <div class="alert alert-warning">{{ message1 }}</div>
+                      {% endif %}
+                      {% csrf_token %}
+
+                  </form>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- /container -->
+
+    <div class="footer">
+        <h2>&copy; 2019 OMBB. All rights reserved | Design by
+            <a href="http://w3layouts.com">324</a>
+        </h2>
+    </div>
+{% endblock %}

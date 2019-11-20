@@ -1,0 +1,25 @@
+.footer {
+    background-color: #FBB5B5;
+    margin-top: 4%;
+    height: 60px;
+}
+
+.footer h2 {
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.8;
+    padding-top: 1%;
+}
+
+.footer h2 a {
+    color: #e20303;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+
+

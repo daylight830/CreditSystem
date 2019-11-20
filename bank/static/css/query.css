@@ -1,0 +1,39 @@
+#query_table{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-left: 10%;
+    width: 80%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #707070;
+    border-radius: 10px;
+}
+
+#openning_table{
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin-left: 10%;
+    width: 80%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #707070;
+    border-radius: 10px;
+}
+
+.buttons{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button{
+    text-align: center;
+}
+
+.words{
+    text-align: center;
+    padding-top: 10%;
+    color: #B71741;
+    font-size: 20px;
+}
